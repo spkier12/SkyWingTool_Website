@@ -1,0 +1,40 @@
+.body {
+    background-image: url("./images/airplane-4252410.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+main {
+    display:grid;
+    place-items: center;
+    text-align: center;
+    color: white;
+    margin-inline: auto;
+}
+
+.model {
+    width: 90%;
+    max-width: 480px;
+    border-radius: 1rem;
+    padding: 1rem;
+    background-color: rgba(26, 26, 26, 0.945);
+
+}
+
+.input-field {
+    border-radius: 0.25rem;
+    width: 90%;
+    padding: 1rem 0.25rem;
+    margin-bottom: 1rem;
+    border-style: none;
+}
+
+.button {
+    width: 92%;
+    border-radius: 0.25rem;
+    border-style: none;
+    background-color: rgb(32, 102, 192);
+    color: white;
+    height: 40px;
+    margin-bottom: 2rem;
+}

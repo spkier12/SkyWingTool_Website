@@ -1,0 +1,24 @@
+.menu {
+    display: grid;
+    width: 20%;
+    text-align: center;
+    justify-content: center;
+    max-width: 250px;
+    min-width: 120px;
+    background-color: rgb(43, 82, 126);
+    padding: 0.25rem 0.25rem;
+    border-radius: 1rem;
+}
+
+a {
+    background-color: rgb(43, 82, 126);
+    margin-bottom: 0.5rem;
+    margin-top: 0.25rem;
+    color: white;
+    height: 50%;
+    text-decoration: none;
+}
+
+a:hover {
+    background-color: rgb(48, 91, 139);
+}
