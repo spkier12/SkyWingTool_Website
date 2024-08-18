@@ -83,6 +83,6 @@ async function Register() {
 
 // Hide previous login page if create new acount button is rpessed
 async function Createnewaccountbutton() {
-    document.getElementsByClassName("model").style.display = "none"
-    document.getElementsByClassName("model2").style.display = "block"
+    document.getElementById("model").style.display = "none"
+    document.getElementById("model2").style.display = "block"
 }
