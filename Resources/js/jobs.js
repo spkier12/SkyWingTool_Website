@@ -15,7 +15,7 @@ async function GetAllJobs() {
 
         // Check if error is not 429 if so exit all beacuse ratelimit
         if (fetchdata.status == 429) {
-            document.getElementById("informationlogin").innerText = "Slow down you are ratelimited"
+            await InformUser("Slow down you are ratelimited")
             return
         }
     
@@ -34,9 +34,9 @@ async function GetAllJobs() {
             }
 
         });
-        
+
         document.getElementById("tabledata").innerHTML = alldata
-        document.getElementById("informationlogin").innerText = fetchdataparsed.Message
+        await InformUser(fetchdataparsed.Message)
     } catch (e) {
         console.log(`\n Error in Jobs.js ${e}`)
     }
@@ -58,7 +58,7 @@ async function GetRandomJobOffers() {
 
         // Check if error is not 429 if so exit all beacuse ratelimit
         if (fetchdata.status == 429) {
-            document.getElementById("informationlogin").innerText = "Slow down you are ratelimited"
+            await InformUser("Slow down you are ratelimited")
             return
         }
     
@@ -76,7 +76,7 @@ async function GetRandomJobOffers() {
             }
         });
         document.getElementById("tabledata2").innerHTML = alldata
-        document.getElementById("informationlogin").innerText = fetchdataparsed.Message
+        await InformUser(fetchdataparsed.Message)
     } catch (e) {
         console.log(`\n Error in Jobs.js ${e}`)
     }
@@ -89,7 +89,7 @@ async function AcceptJobOffer(WJob) {
 
         // Check if job is not empty so that the request isnt sendt
         if (WJob == undefined && WJob == "") {
-            document.getElementById("informationlogin").innerText = "Cannot join the job beacuse you tried to join a empty job"
+            await InformUser("Cannot apply for the job beacuse you tried to apply for a empty job")
             return
         }
 
@@ -108,13 +108,14 @@ async function AcceptJobOffer(WJob) {
 
         // Check if error is not 429 if so exit all beacuse ratelimit
         if (fetchdata.status == 429) {
-            document.getElementById("informationlogin").innerText = "Slow down you are ratelimited"
+            await InformUser("Slow down you are ratelimited")
+
             return
         }
     
         // Read repsonse data and print to console and set UUID to local storage and set information on screen
         const fetchdataparsed = JSON.parse(await fetchdata.text())
-        document.getElementById("informationlogin").innerText = fetchdataparsed.Message
+        await InformUser(fetchdataparsed.Message)
     } catch (e) {
         console.log(`\n Error in Jobs.js ${e}`)
     }
@@ -124,7 +125,7 @@ async function ApplyforJob(WJob) {
     try {
 
         if (WJob == undefined && WJob == "") {
-            document.getElementById("informationlogin").innerText = "Cannot apply for the job beacuse you tried to apply for a empty job"
+            await InformUser("Cannot apply for the job beacuse you tried to apply for a empty job")
             return
         }
         // Send request
@@ -142,13 +143,13 @@ async function ApplyforJob(WJob) {
     
         // Check if error is not 429 if so exit all beacuse ratelimit
         if (fetchdata.status == 429) {
-            document.getElementById("informationlogin").innerText = "Slow down you are ratelimited"
+            await InformUser("Slow down you are ratelimited")
             return
         }
 
         // Read repsonse data and print to console and set UUID to local storage and set information on screen
         const fetchdataparsed = JSON.parse(await fetchdata.text())
-        document.getElementById("informationlogin").innerText = fetchdataparsed.Message
+        await InformUser(fetchdataparsed.Message)
     } catch (e) {
         console.log(`\n Error in Jobs.js ${e}`)
     }
