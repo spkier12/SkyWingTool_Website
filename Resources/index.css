@@ -1,7 +1,5 @@
 .body {
-    background-image: url("./images/airplane-4252410.jpg");
-    background-repeat: no-repeat;
-    background-size: cover;
+    background-image: url("./images/simulator-2313002.jpg");
 }
 
 main {
@@ -13,12 +11,25 @@ main {
 }
 
 .model {
+    display: block;
     width: 90%;
     max-width: 480px;
-    border-radius: 1rem;
-    padding: 1rem;
-    background-color: rgba(26, 26, 26, 0.945);
+    border-radius: 3rem;
+    padding: 2rem;
+    margin-top: 5rem;
+    background-color: rgba(26, 26, 26, 0.753);
+ 
+}
 
+.model2 {
+    display: none;
+    width: 90%;
+    max-width: 480px;
+    border-radius: 3rem;
+    padding: 2rem;
+    margin-top: 5rem;
+    background-color: rgba(26, 26, 26, 0.753);
+ 
 }
 
 .input-field {
@@ -27,6 +38,8 @@ main {
     padding: 1rem 0.25rem;
     margin-bottom: 1rem;
     border-style: none;
+    color: black;
+    margin-top: 0.2rem;
 }
 
 .button {
@@ -37,4 +50,10 @@ main {
     color: white;
     height: 40px;
     margin-bottom: 2rem;
+}
+
+.button:hover {
+    width: 91%;
+    border-radius: 0.5rem;
+    background-color: rgb(8, 34, 68);
 }
