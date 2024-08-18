@@ -3,69 +3,58 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="./Resources/basicbuildingblocks.css">
     <link rel="stylesheet" href="./Resources/dashboard.css">
     <link rel="stylesheet" href="./Resources/menu.css">
+    <script type="text/javascript" src="./Resources/js/connections.js"></script>
+    <script type="text/javascript" src="./Resources/js/verifytoken.js"></script>
     <title>SkyWingTool Dashboard</title>
 </head>
 <body class="body">
     <main>
+        <div class="menu justify-center">
+            <div class="dropdown">
+                <span>Menu</span>
+                <div class="dropdown-content">
+                    <a href="dashboard.html">Dashboard</a>
+                    <a href="jobs.html">Jobs</a>
+                    <a href="settings.html">Settings</a>
+                    <a href="index.html">Quit</a>
+                </div>
+              </div>
+        </div>
         <div class="modal">
-            <div class="menu">
-                <img src="./Resources/images/icons8-plane-window-96.png">
-                <h2>SkyWingTool</h2>
-                <a href="/dashboard.html">Dashboard</a>
-                <a href="http://">Schedule</a>
-                <a href="http://">Current Flight</a>
-                <a href="/shop.html">Shop</a>
-                <a href="/settings.html">Settings</a>
-                <a href="/index.html">Quit</a>
-            </div>
-
             <div class="dashboard">
                 <div class="dashboard-upper">
                     <div class="dashboard-upper-ad">
                         <div class="dashboard-upper-ad-inner">
                             <h3>Flight Hours</h3>
-                            <p>0 Hours</p>
-                        </div>
-                        <div class="dashboard-upper-ad-inner">
-                            <img src="./Resources/images/icons8-airplane-64.png" alt="" srcset="">
+                            <p>Unknown</p>
                         </div>
                     </div>
                     <div class="dashboard-upper-ad">
                         <div class="dashboard-upper-ad-inner">
                             <h3>Last Landing rate</h3>
-                            <p>0 Good landing</p>
-                        </div>
-                        <div class="dashboard-upper-ad-inner">
-                            <img src="./Resources/images/icons8-airplane-65.png" alt="" srcset="">
+                            <p>Unknown</p>
                         </div>
                     </div>
                     <div class="dashboard-upper-ad">
                         <div class="dashboard-upper-ad-inner">
-                            <h3>Rank / XP</h3>
-                            <p>Flight Student / 0 XP</p>
-                        </div>
-                        <div class="dashboard-upper-ad-inner">
-                            <img src="./Resources/images/icons8-26-pilot-58.png" alt="" srcset="">
+                            <h3>XP</h3>
+                            <p>Unknown</p>
                         </div>
                     </div>
                     <div class="dashboard-upper-ad">
                         <div class="dashboard-upper-ad-inner">
-                            <h3>Last Company Flown</h3>
+                            <h3>Current Company</h3>
                             <p>Unkown</p>
                         </div>
-                        <div class="dashboard-upper-ad-inner">
-                            <img src="./Resources/images/icons8-agent-60.png" alt="" srcset="">
-                        </div>
                     </div>
                     <div class="dashboard-upper-ad">
                         <div class="dashboard-upper-ad-inner">
-                            <h3>Last Location</h3>
-                            <p>ENGM</p>
-                        </div>
-                        <div class="dashboard-upper-ad-inner">
-                            <img src="./Resources/images/icons8-location-64.png" alt="" srcset="">
+                            <h3>Location</h3>
+                            <p>Unkown</p>
                         </div>
                     </div>
                 </div>

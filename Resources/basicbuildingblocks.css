@@ -11,17 +11,14 @@ main {
 }
 
 .modal {
-    display: flex;
-    height: 100%;
+    margin-top: 0.3rem;
+    display: inline-flexbox;
     background-color: rgba(41, 41, 41, 0.89);
-    margin-inline: auto;
     border-radius: 1rem;
+    padding: 1rem;
+    width: 70%;
 }
 
-.dashboard {
-    display: inline-block;
-    background-color: rgba(0, 255, 255, 0);
-}
 
 .dashboard-upper {
     display: flex;
@@ -30,13 +27,12 @@ main {
 }
 
 .dashboard-upper-ad {
-    display: flex;
+    display: block;
     background-color: rgba(91, 141, 197, 0.466);
-    border-radius: 0.2rem;
+    border-radius: 2rem;
     box-shadow: 0 15px 8px 0 rgba(0, 0, 0, 0.2); 
-    margin: 0 5px;
-    max-width: 80%;
-    max-width: 535px;
+    margin: 0 10px;
+    width: 100%;
 }
 
 .dashboard-upper-ad-inner {
@@ -52,17 +48,20 @@ main {
     padding: 0.5rem;
 }
 
-.input_fields {
-    border-radius: 1rem;
-    border-style: none;
-    width: 100%;
-}
-
-.button {
-    border-radius: 1rem;
-    border-style: none;
-    background-color: rgb(14, 110, 155);
-    color: white;
-    height: 32px;
-    max-height: 32px;
+@media screen and (max-width: 1106px) {
+    .dashboard-upper {
+        display: inline-block;
+        background-color: rgba(0, 255, 255, 0);
+        padding: 1rem;
+        width: 100%;
+        text-align: center;
+    }
+    .dashboard-upper-ad {
+        display: flex;
+        background-color: rgba(91, 141, 197, 0.466);
+        border-radius: 1rem;
+        box-shadow: 0 15px 8px 0 rgba(0, 0, 0, 0.2); 
+        margin-top: 0.3rem;
+        text-align: center;
+    }
 }

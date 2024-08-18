@@ -1,0 +1,36 @@
+.dashboard-upper-ad-intable {
+    background-color: rgba(91, 141, 197, 0.13);
+    box-shadow: 0 15px 8px 0 rgba(0, 0, 0, 0.2); 
+    overflow: auto;
+    max-height: 40rem;
+    width: 100%;
+}
+
+
+tr:nth-child(even) {
+    background-color: rgba(91, 141, 197, 0.13);
+
+}
+th {
+    padding: 0.5rem;
+    width: 100%;
+}
+td {
+    padding: 0.8rem;
+
+}
+
+.custombutton {
+    padding: 1rem 0.5rem;
+    background-color: rgba(91, 141, 197, 0.466);
+    border-radius: 1rem;
+    border-style: none;
+    color: white;
+}
+
+.custombutton:hover {
+    padding: 1rem 0.5rem;
+    background-color: rgba(103, 151, 206, 0.466);
+    border-radius: 1rem;
+    border-style: none;
+}
