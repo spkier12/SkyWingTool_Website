@@ -46,6 +46,7 @@ main {
     background-color: rgba(0, 255, 255, 0);
     margin-inline: auto;
     padding: 0.5rem;
+    justify-content: center;
 }
 
 @media screen and (max-width: 1106px) {
