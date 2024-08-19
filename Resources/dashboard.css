@@ -1,7 +1,37 @@
-iframe {
+.Map { 
+    height: 1000px;
+    min-height: 64px;
     width: 100%;
-    border: none;
-    height: 680px;
-    max-height: 680px;
-    border-radius: 1rem;
+    border-radius: 0.5rem;
+    z-index: 0;
+}
+
+@media screen and (max-height: 1200px) {
+    .Map { 
+        height: 800px;
+    }
+}
+
+@media screen and (max-height: 1100px) {
+    .Map { 
+        height: 700px;
+    }
+}
+
+@media screen and (max-height: 900px) {
+    .Map { 
+        height: 600px;
+    }
+}
+
+@media screen and (max-height: 800px) {
+    .Map { 
+        height: 500px;
+    }
+}
+
+@media screen and (max-height: 700px) {
+    .Map { 
+        height: 300px;
+    }
 }

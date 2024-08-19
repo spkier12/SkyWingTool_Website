@@ -2,69 +2,82 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="https://cdn.tailwindcss.com"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=0.8">
+    <title>SkyWingTool Dashboard</title>
+    <!-- <script src="https://cdn.tailwindcss.com"></script> -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+    integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
+    crossorigin=""/>
+
+    <!-- Custom import of JS -->
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+    integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
+    crossorigin=""></script>
+    <script type="text/javascript" src="./Resources/js/connections.js"></script>
+    <script type="text/javascript" src="./Resources/js/verifytoken.js"></script>
+
+    <!-- Custom imports of CSS -->
     <link rel="stylesheet" href="./Resources/basicbuildingblocks.css">
     <link rel="stylesheet" href="./Resources/dashboard.css">
     <link rel="stylesheet" href="./Resources/menu.css">
-    <script type="text/javascript" src="./Resources/js/connections.js"></script>
-    <script type="text/javascript" src="./Resources/js/verifytoken.js"></script>
-    <title>SkyWingTool Dashboard</title>
+
+
 </head>
+
 <body class="body">
     <main>
-        <div class="menu justify-center">
-            <div class="dropdown">
-                <span>Menu</span>
-                <div class="dropdown-content">
-                    <a href="dashboard.html">Dashboard</a>
-                    <a href="jobs.html">Jobs</a>
-                    <a href="settings.html">Settings</a>
-                    <a href="index.html">Quit</a>
-                </div>
-              </div>
-        </div>
         <div class="modal">
-            <div class="dashboard">
-                <div class="dashboard-upper">
-                    <div class="dashboard-upper-ad">
-                        <div class="dashboard-upper-ad-inner">
-                            <h3>Flight Hours</h3>
-                            <p>Unknown</p>
-                        </div>
-                    </div>
-                    <div class="dashboard-upper-ad">
-                        <div class="dashboard-upper-ad-inner">
-                            <h3>Last Landing rate</h3>
-                            <p>Unknown</p>
-                        </div>
-                    </div>
-                    <div class="dashboard-upper-ad">
-                        <div class="dashboard-upper-ad-inner">
-                            <h3>XP</h3>
-                            <p>Unknown</p>
-                        </div>
-                    </div>
-                    <div class="dashboard-upper-ad">
-                        <div class="dashboard-upper-ad-inner">
-                            <h3>Current Company</h3>
-                            <p>Unkown</p>
-                        </div>
-                    </div>
-                    <div class="dashboard-upper-ad">
-                        <div class="dashboard-upper-ad-inner">
-                            <h3>Location</h3>
-                            <p>Unkown</p>
-                        </div>
+            <div class="menu">
+                <ul>
+                    <li><a href="dashboard.html">Dashboard</a></li>
+                    <li><a href="jobs.html">Jobs</a></li>
+                    <li><a href="settings.html">Settings</a></li>
+                    <li><a href="index.html">Quit</a></li>
+                    <li><a href="index.html">Quit</a></li>
+                    <li><a href="index.html">Quit</a></li>
+                </ul>
+            </div>
+            <div class="dashboard-upper">
+                <div class="dashboard-upper-ad">
+                    <div class="dashboard-upper-ad-inner">
+                        <h3>Flight Hours</h3>
+                        <p>Unknown</p>
                     </div>
                 </div>
-                
+                <div class="dashboard-upper-ad">
+                    <div class="dashboard-upper-ad-inner">
+                        <h3>Last Landing rate</h3>
+                        <p>Unknown</p>
+                    </div>
+                </div>
+                <div class="dashboard-upper-ad">
+                    <div class="dashboard-upper-ad-inner">
+                        <h4>XP</h4>
+                        <p>Unknown</p>
+                    </div>
+                </div>
+                <div class="dashboard-upper-ad">
+                    <div class="dashboard-upper-ad-inner">
+                        <h4>Current Company</h4>
+                        <p>Unkown</p>
+                    </div>
+                </div>
+                <div class="dashboard-upper-ad">
+                    <div class="dashboard-upper-ad-inner">
+                        <h4>Location</h4>
+                        <p>Unkown</p>
+                    </div>
+                </div>
+            </div>
+            
 
-                <div class="dashboard-center">
-                    <iframe src="https://vatsim-radar.com/"></iframe>
-                </div>
+            <div class="dashboard-center">
+                <div id="Map" class="Map"></div>
             </div>
         </div>
     </main>
 </body>
+
+<!-- Scripts that needs to load after html -->
+<script type="text/javascript" src="./Resources/js/map.js"></script>
 </html>
