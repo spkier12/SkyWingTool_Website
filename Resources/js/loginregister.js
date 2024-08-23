@@ -43,9 +43,9 @@ async function Login() {
 async function Register() {
     try {
         // Get data from inputs
-        const Email0 = document.getElementById("emailinput").value
-        const Username0 = document.getElementById("usernameinput").value
-        const Password0 = document.getElementById("passwordinput").value
+        const Email0 = document.getElementById("emailinputr").value
+        const Username0 = document.getElementById("usernameinputr").value
+        const Password0 = document.getElementById("passwordinputr").value
 
         // Send request
         const fetchdata = await fetch(`${apiconnections()}/apiv1/createuser`, {

@@ -35,10 +35,17 @@ async function GetAllJobs() {
 
         });
 
+        // If status is 0 then why even show it?
+        if (fetchdataparsed.Status == 0) {
+            document.getElementById("tabledata2").style.display = "none"
+            return
+        }
+
         document.getElementById("tabledata").innerHTML = alldata
         await InformUser(fetchdataparsed.Message)
     } catch (e) {
         console.log(`\n Error in Jobs.js ${e}`)
+        document.getElementById("tabledata").innerHTML = "Connection to server failed"
     }
 }
 
@@ -75,10 +82,19 @@ async function GetRandomJobOffers() {
             `
             }
         });
+
+        // If status is 0 then why even show it?
+        if (fetchdataparsed.Status == 0) {
+            document.getElementById("tabledata2").style.display = "none"
+            return
+        }
+
+
         document.getElementById("tabledata2").innerHTML = alldata
         await InformUser(fetchdataparsed.Message)
     } catch (e) {
         console.log(`\n Error in Jobs.js ${e}`)
+        document.getElementById("tabledata2").innerHTML = "Connection to server failed"
     }
 }
 
@@ -109,15 +125,16 @@ async function AcceptJobOffer(WJob) {
         // Check if error is not 429 if so exit all beacuse ratelimit
         if (fetchdata.status == 429) {
             await InformUser("Slow down you are ratelimited")
-
             return
         }
+        
     
         // Read repsonse data and print to console and set UUID to local storage and set information on screen
         const fetchdataparsed = JSON.parse(await fetchdata.text())
         await InformUser(fetchdataparsed.Message)
     } catch (e) {
         console.log(`\n Error in Jobs.js ${e}`)
+        document.getElementById("tabledata3").innerHTML = "Connection to server failed"
     }
 }
 
